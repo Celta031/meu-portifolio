@@ -39,8 +39,8 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button className="bg-blue-600 hover:bg-blue-700">Ver Projetos</Button>
-              <Button variant="outline">Baixar CV</Button>
+              <Button className="bg-blue-600 hover:bg-blue-700 ">Ver Projetos</Button>
+              <Button className = "text-gray-900 dark:text-gray-100 "variant="outline">Baixar CV</Button>
             </motion.div>
             <motion.div
               className="flex gap-4 mt-4"
@@ -49,20 +49,23 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 }}
             >
               <Button variant="ghost" size="icon" className="rounded-full text-gray-900 dark:text-gray-100">
+              <a href="https://github.com/Celta031" target="_blank" rel="noopener noreferrer">
                 <Github className="h-5 w-5" />
-                <span className="sr-only">GitHub</span>
+                <span className="sr-only">GitHub</span></a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full text-gray-900 dark:text-gray-100">
+              <a href="https://www.linkedin.com/in/wesleyraphaelmartins/" target="_blank" rel="noopener noreferrer">
                 <Linkedin className="h-5 w-5" />
-                <span className="sr-only">LinkedIn</span>
+                <span className="sr-only">LinkedIn</span></a>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full text-gray-900 dark:text-gray-100">
                 <Twitter className="h-5 w-5" />
                 <span className="sr-only">Twitter</span>
               </Button>
               <Button variant="ghost" size="icon" className="rounded-full text-gray-900 dark:text-gray-100">
+              <a href="mailto:email@provedor.com.br" target="_blank" rel="noopener noreferrer">
                 <Mail className="h-5 w-5" />
-                <span className="sr-only">Email</span>
+                <span className="sr-only">Email</span></a>
               </Button>
             </motion.div>
           </div>
@@ -79,7 +82,7 @@ export default function Hero() {
               <div className="absolute inset-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 opacity-80" />
               <div className="absolute inset-16 rounded-full bg-background flex items-center justify-center">
                 <img
-                  src="/placeholder.svg?height=300&width=300"
+                  src="/foto.jpeg?height=300&width=300"
                   alt="Profile"
                   className="rounded-full h-full w-full object-cover"
                 />
@@ -95,8 +98,8 @@ export default function Hero() {
         >
           <Button variant="ghost" size="icon" asChild>
             <a href="#about">
-              <ArrowDown className="h-6 w-6" />
-              <span className="sr-only">Rolar para baixo</span>
+              <ArrowDown className="h-6 w-6 text-gray-900 dark:text-gray-100" />
+              <span className="sr-only ">Rolar para baixo</span>
             </a>
           </Button>
         </motion.div>

@@ -38,20 +38,23 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <Button variant="ghost" size="icon" className="rounded-full">
+            <a href="https://github.com/Celta031" target="_blank" rel="noopener noreferrer">
               <Github className="h-5 w-5" />
-              <span className="sr-only">GitHub</span>
+              <span className="sr-only">GitHub</span></a>
             </Button>
             <Button variant="ghost" size="icon" className="rounded-full">
+            <a href="https://www.linkedin.com/in/wesleyraphaelmartins/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="h-5 w-5" />
-              <span className="sr-only">LinkedIn</span>
+              <span className="sr-only">LinkedIn</span></a>
             </Button>
             <Button variant="ghost" size="icon" className="rounded-full">
               <Twitter className="h-5 w-5" />
               <span className="sr-only">Twitter</span>
             </Button>
             <Button variant="ghost" size="icon" className="rounded-full">
+              <a href="mailto:email@provedor.com.br" target="_blank" rel="noopener noreferrer">
               <Mail className="h-5 w-5" />
-              <span className="sr-only">Email</span>
+              <span className="sr-only">Email</span></a>
             </Button>
           </motion.div>
 
@@ -72,7 +75,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Button variant="outline" size="icon" className="rounded-full" onClick={scrollToTop}>
-              <ArrowUp className="h-5 w-5" />
+              <ArrowUp className="h-5 w-5 text-gray-900 dark:text-gray-100" />
               <span className="sr-only">Voltar ao topo</span>
             </Button>
           </motion.div>

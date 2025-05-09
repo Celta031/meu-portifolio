@@ -231,13 +231,13 @@ export default function Contact() {
               <CardContent>
                 <div className="flex flex-wrap gap-3">
                   <Button variant="outline" size="lg" className="gap-2" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.linkedin.com/in/wesleyraphaelmartins/" target="_blank" rel="noopener noreferrer">
                       <Linkedin className="h-5 w-5 text-blue-600" />
                       LinkedIn
                     </a>
                   </Button>
                   <Button variant="outline" size="lg" className="gap-2" asChild>
-                    <a href="#" target="_blank" rel="noopener noreferrer">
+                    <a href="https://github.com/Celta031" target="_blank" rel="noopener noreferrer">
                       <Github className="h-5 w-5" />
                       GitHub
                     </a>
