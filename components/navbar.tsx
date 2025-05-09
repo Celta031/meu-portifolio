@@ -36,7 +36,7 @@ export default function Navbar() {
             transition={{ duration: 0.5 }}
           />
           <span className="font-bold text-xl text-foreground transition-colors">
-            DataSci<span className="text-blue-600 dark:text-blue-400">Portfolio</span>
+            wrmartins<span className="text-blue-600 dark:text-blue-400">Portfolio</span>
           </span>
         </Link>
 
@@ -60,14 +60,14 @@ export default function Navbar() {
   >
     <Sun className="h-5 w-5 rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
     <Moon className="absolute h-5 w-5 rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-    <span className="sr-only">Toggle theme</span>
+    <span className="sr-only">Alterar tema</span>
   </Button>
 </div>
         </nav>
 
         {/* Mobile Menu Button */}
-        <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
-          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        <Button variant="ghost" size="icon" className="md:hidden " onClick={toggleMenu}>
+          {isOpen ? <X className="h-6 w-6 text-gray-900 dark:text-gray-100" /> : <Menu className="h-6 w-6 text-gray-900 dark:text-gray-100" />}
         </Button>
       </div>
 
@@ -80,19 +80,19 @@ export default function Navbar() {
           exit={{ opacity: 0, y: -10 }}
           transition={{ duration: 0.2 }}
         >
-          <nav className="container flex flex-col gap-4 p-6 min-h-[calc(100vh-4rem)]">
+          <nav className="container flex flex-col gap-6 p-6 min-h-[calc(100vh-4rem)]">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400 leading-none"
+                className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400 leading-none"
                 onClick={toggleMenu}
               >
                 <item.icon className="h-5 w-5 text-blue-600" />
                 {item.name}
               </Link>
             ))}
-            <div className="flex items-center mt-4">
+            <div className="flex items-center mt-1">
               <Button
                 variant="outline"
                 size="sm"

@@ -39,18 +39,18 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="mb-4">
-              Olá! Sou um cientista de dados e desenvolvedor de software especializado em inteligência artificial. Com
-              experiência em análise de dados, desenvolvimento de dashboards interativos e implementação de modelos de
+              Olá! Sou um cientista de dados e desenvolvedor de software. 
+              Com experiência de projetos em análise de dados, desenvolvimento de dashboards interativos e implementação de modelos de
               machine learning, busco constantemente aplicar tecnologias inovadoras para resolver problemas complexos.
             </p>
             <p>
-              Minha jornada na ciência de dados começou com uma forte base em estatística e programação, evoluindo para
+              Minha jornada na ciência de dados começou a e programação, evoluindo para
               o desenvolvimento de soluções completas que combinam análise de dados, visualização e implementação de
               algoritmos de IA. Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento e
               habilidades.
             </p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 ">
             {[
               {
                 icon: Database,
@@ -76,11 +76,6 @@ export default function About() {
                 icon: BookOpen,
                 title: "Pesquisa",
                 description: "Pesquisa contínua em novas tecnologias e metodologias de ciência de dados.",
-              },
-              {
-                icon: Award,
-                title: "Consultoria",
-                description: "Consultoria em projetos de transformação digital e implementação de soluções de dados.",
               },
             ].map((item, index) => (
               <motion.div

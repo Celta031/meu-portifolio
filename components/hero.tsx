@@ -22,7 +22,8 @@ export default function Hero() {
               >
                 <span className="text-blue-600">Cientista de Dados</span> &
                 <br />
-                Desenvolvedor de IA
+                <span className="text-gray-900 dark:text-gray-100">Desenvolvedor de IA</span>
+                
               </motion.h1>
               <motion.p
                 className="max-w-[600px] text-muted-foreground md:text-xl"
