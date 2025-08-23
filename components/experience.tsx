@@ -8,9 +8,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 export default function Experience() {
   const experiences = [
     {
+      title: " Analista de suporte de infraestrutura PLENO",
+      company: "TACOM Projetos de Bilhetagem Inteligente ",
+      period: "2025 - Presente",
+      description:
+        "Como Analista de Suporte de Infraestrutura Pleno, desempenho um papel central na garantia da alta disponibilidade, performance e segurança das soluções de bilhetagem inteligente da TACOM.",
+    },
+    {
       title: "Têcn. de suporte ao usuário de T.I",
       company: "Informinas Informatica.",
-      period: "2022 - Presente",
+      period: "AGO 2022 - AGO 2025",
       description:
         "Atuo como Técnico de Suporte de T.I., garantindo o funcionamento eficiente de sistemas, especialmente ERPs para postos de combustível, prestando suporte técnico a usuários e infraestrutura, com foco em PostgreSQL, servidores Linux e Windows.",
     },
@@ -50,7 +57,8 @@ export default function Experience() {
               <div
                 className={`flex flex-col ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"} items-center gap-4`}
               >
-                <div className="md:w-1/2 flex justify-center md:justify-end">
+                {/* Card Container */}
+                <div className={`md:w-1/2 flex justify-center ${index % 2 === 0 ? "md:justify-end" : "md:justify-start"}`}>
                   <div className={`w-full max-w-md ${index % 2 === 0 ? "md:mr-8" : "md:ml-8"}`}>
                     <Card>
                       <CardHeader>
@@ -66,13 +74,15 @@ export default function Experience() {
                   </div>
                 </div>
 
+                {/* Timeline Dot */}
                 <div className="relative flex items-center justify-center z-10 hidden md:flex">
                   <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
                     <Calendar className="h-5 w-5 text-white" />
                   </div>
                 </div>
 
-                <div className="md:w-1/2 flex justify-center md:justify-start">
+                {/* Period Container */}
+                <div className={`md:w-1/2 flex justify-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"}`}>
                   <div className={`w-full max-w-md ${index % 2 === 0 ? "md:ml-8" : "md:mr-8"}`}>
                     <div className="flex items-center h-full">
                       <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-md">

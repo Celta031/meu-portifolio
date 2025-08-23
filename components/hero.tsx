@@ -20,9 +20,10 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="text-blue-600">Cientista de Dados</span> &
+                <span className="text-blue-600">Cientista de Dados </span> 
+                <span className="text-gray-900 dark:text-gray-100">&</span>
                 <br />
-                <span className="text-gray-900 dark:text-gray-100">Desenvolvedor de IA</span>
+                <span className="text-gray-900 dark:text-gray-100">Desenvolvedor de ML</span>
                 
               </motion.h1>
               <motion.p
@@ -40,8 +41,14 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <Button className="bg-blue-600 hover:bg-blue-700 ">Ver Projetos</Button>
-              <Button className = "text-gray-900 dark:text-gray-100 "variant="outline">Baixar CV</Button>
+               <a href="https://github.com/Celta031" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-blue-600 hover:bg-blue-700 ">Ver Projetos</Button>
+              </a>
+              <a href="/curriculo.pdf" download>
+                <Button className="text-gray-900 dark:text-gray-100" variant="outline">
+                  Baixar CV
+                </Button>
+              </a>
             </motion.div>
             <motion.div
               className="flex gap-4 mt-4"

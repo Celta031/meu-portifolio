@@ -44,7 +44,7 @@ export default function About() {
               machine learning, busco constantemente aplicar tecnologias inovadoras para resolver problemas complexos.
             </p>
             <p>
-              Minha jornada na ciência de dados começou a e programação, evoluindo para
+              Minha jornada na ciência de dados começou na programação, evoluindo para
               o desenvolvimento de soluções completas que combinam análise de dados, visualização e implementação de
               algoritmos de IA. Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento e
               habilidades.
