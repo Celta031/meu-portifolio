@@ -1,10 +1,6 @@
 # Meu Portfólio - Cientista de Dados e Desenvolvedor de ML
 
-![Foto de Perfil](public/foto.jpeg)
-
 Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e experiência como Cientista de Dados e Desenvolvedor de Machine Learning.
-
-**[⬆️ Voltar ao topo](#meu-portifólio---cientista-de-dados-e-desenvolvedor-de-ml)**
 
 ## 📚 Seções
 
