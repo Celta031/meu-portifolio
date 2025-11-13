@@ -23,7 +23,7 @@ FROM nginx:1.25-alpine
 
 # Copia os arquivos estáticos gerados no estágio de build (da pasta /app/build)
 # para a pasta padrão do Nginx que serve conteúdo na web.
-COPY --from=builder /app/build /usr/share/nginx/html
+COPY --from=builder /app/out /usr/share/nginx/html
 
 # Copia nossa configuração customizada do Nginx (próximo arquivo)
 COPY nginx.conf /etc/nginx/conf.d/default.conf
