@@ -12,8 +12,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfólio de Cientista de Dados",
-  description: "Portfólio profissional com projetos de dashboards, análise de dados, software e IA",
+  title: "Portfólio de Engenheiro DevOps | wrmartins",
+  description: "Portfólio profissional com projetos de DevOps, Cloud, Infraestrutura e Automação.",
     generator: 'v0.dev'
 }
 

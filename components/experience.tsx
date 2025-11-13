@@ -37,7 +37,7 @@ export default function Experience() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-gray-900 dark:text-gray-100">Experiência</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl">
-              Minha trajetória profissional na área de dados e tecnologia
+              Minha trajetória profissional na área de infraestrutura e DevOps
             </p>
           </div>
         </motion.div>
@@ -64,7 +64,7 @@ export default function Experience() {
                       <CardHeader>
                         <CardTitle>{exp.title}</CardTitle>
                         <CardDescription className="flex items-center gap-1">
-                          <span className="font-medium text-blue-600">{exp.company}</span>
+                          <span className="font-medium text-orange-600">{exp.company}</span>
                         </CardDescription>
                       </CardHeader>
                       <CardContent>
@@ -76,7 +76,7 @@ export default function Experience() {
 
                 {/* Timeline Dot */}
                 <div className="relative flex items-center justify-center z-10 hidden md:flex">
-                  <div className="w-10 h-10 rounded-full bg-blue-600 flex items-center justify-center">
+                  <div className="w-10 h-10 rounded-full bg-orange-600 flex items-center justify-center">
                     <Calendar className="h-5 w-5 text-white" />
                   </div>
                 </div>
@@ -85,7 +85,7 @@ export default function Experience() {
                 <div className={`md:w-1/2 flex justify-center ${index % 2 === 0 ? "md:justify-start" : "md:justify-end"}`}>
                   <div className={`w-full max-w-md ${index % 2 === 0 ? "md:ml-8" : "md:mr-8"}`}>
                     <div className="flex items-center h-full">
-                      <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-md">
+                      <div className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-4 py-2 rounded-md">
                         {exp.period}
                       </div>
                     </div>

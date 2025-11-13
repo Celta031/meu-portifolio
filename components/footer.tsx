@@ -24,9 +24,9 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800" />
+            <div className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-600 to-orange-800" />
             <span className="font-bold text-xl">
-              DataSci<span className="text-blue-600">Portfolio</span>
+              DevOps<span className="text-orange-600">Portfolio</span>
             </span>
           </motion.div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            <p>© {new Date().getFullYear()} DataSciPortfolio. Todos os direitos reservados.</p>
+            <p>© {new Date().getFullYear()} wrmartins. Todos os direitos reservados.</p>
           </motion.div>
 
           <motion.div

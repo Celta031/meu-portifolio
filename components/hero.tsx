@@ -8,8 +8,8 @@ import { Button } from "@/components/ui/button"
 export default function Hero() {
   return (
     <section id="home" className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-background transition-colors">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(0,112,243,0.2),transparent_40%)]
-                                            dark:bg-[radial-gradient(circle_at_30%_20%,rgba(0,112,243,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_30%_20%,rgba(234,88,12,0.2),transparent_40%)]
+                                            dark:bg-[radial-gradient(circle_at_30%_20%,rgba(234,88,12,0.1),transparent_50%)]" />
       <div className="container px-4 md:px-6">
         <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
           <div className="flex flex-col justify-center space-y-4">
@@ -20,10 +20,10 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
               >
-                <span className="text-blue-600">Cientista de Dados </span> 
+                <span className="text-orange-600">Engenheiro DevOps </span> 
                 <span className="text-gray-900 dark:text-gray-100">&</span>
                 <br />
-                <span className="text-gray-900 dark:text-gray-100">Desenvolvedor de ML</span>
+                <span className="text-gray-900 dark:text-gray-100">Especialista em Cloud</span>
                 
               </motion.h1>
               <motion.p
@@ -32,7 +32,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                Transformando dados em insights e construindo soluções inteligentes para problemas complexos.
+                Automatizando infraestruturas, otimizando pipelines e construindo soluções em nuvem escaláveis e seguras.
               </motion.p>
             </div>
             <motion.div
@@ -42,7 +42,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.4 }}
             >
                <a href="https://github.com/Celta031" target="_blank" rel="noopener noreferrer">
-                <Button className="bg-blue-600 hover:bg-blue-700 ">Ver Projetos</Button>
+                <Button className="bg-orange-600 hover:bg-orange-700 ">Ver Projetos</Button>
               </a>
               <a href="/curriculo.pdf" download>
                 <Button className="text-gray-900 dark:text-gray-100" variant="outline">
@@ -84,10 +84,10 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <div className="relative h-[400px] w-[400px]">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 opacity-20 blur-3xl" />
-              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 opacity-40 blur-xl" />
-              <div className="absolute inset-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 opacity-60 blur-md" />
-              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-blue-600 to-blue-800 opacity-80" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-orange-600 to-orange-800 opacity-20 blur-3xl" />
+              <div className="absolute inset-4 rounded-full bg-gradient-to-br from-orange-600 to-orange-800 opacity-40 blur-xl" />
+              <div className="absolute inset-8 rounded-full bg-gradient-to-br from-orange-600 to-orange-800 opacity-60 blur-md" />
+              <div className="absolute inset-12 rounded-full bg-gradient-to-br from-orange-600 to-orange-800 opacity-80" />
               <div className="absolute inset-16 rounded-full bg-background flex items-center justify-center">
                 <img
                   src="/foto.jpeg?height=300&width=300"

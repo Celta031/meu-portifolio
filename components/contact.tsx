@@ -162,7 +162,7 @@ export default function Contact() {
                       onChange={handleChange}
                     />
                   </div>
-                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+                  <Button type="submit" className="w-full bg-orange-600 hover:bg-orange-700" disabled={isSubmitting}>
                     {isSubmitting ? (
                       <span className="flex items-center gap-2">
                         <div className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
@@ -194,8 +194,8 @@ export default function Contact() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-900">
-                    <AtSign className="h-5 w-5 text-blue-600" />
+                  <div className="rounded-full bg-orange-100 p-2 dark:bg-orange-900">
+                    <AtSign className="h-5 w-5 text-orange-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Email</p>
@@ -203,8 +203,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-900">
-                    <Phone className="h-5 w-5 text-blue-600" />
+                  <div className="rounded-full bg-orange-100 p-2 dark:bg-orange-900">
+                    <Phone className="h-5 w-5 text-orange-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Telefone</p>
@@ -212,8 +212,8 @@ export default function Contact() {
                   </div>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-900">
-                    <MapPin className="h-5 w-5 text-blue-600" />
+                  <div className="rounded-full bg-orange-100 p-2 dark:bg-orange-900">
+                    <MapPin className="h-5 w-5 text-orange-600" />
                   </div>
                   <div>
                     <p className="text-sm text-muted-foreground">Localização</p>
@@ -232,7 +232,7 @@ export default function Contact() {
                 <div className="flex flex-wrap gap-3">
                   <Button variant="outline" size="lg" className="gap-2" asChild>
                     <a href="https://www.linkedin.com/in/wesleyraphaelmartins/" target="_blank" rel="noopener noreferrer">
-                      <Linkedin className="h-5 w-5 text-blue-600" />
+                      <Linkedin className="h-5 w-5 text-orange-600" />
                       LinkedIn
                     </a>
                   </Button>
@@ -244,7 +244,7 @@ export default function Contact() {
                   </Button>
                   <Button variant="outline" size="lg" className="gap-2" asChild>
                     <a href="#" target="_blank" rel="noopener noreferrer">
-                      <Twitter className="h-5 w-5 text-blue-400" />
+                      <Twitter className="h-5 w-5 text-orange-400" />
                       Twitter
                     </a>
                   </Button>

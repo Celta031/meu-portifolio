@@ -7,34 +7,36 @@ import { Progress } from "@/components/ui/progress"
 
 export default function Skills() {
   const technicalSkills = [
-    { name: "Python", level: 95 },
-    { name: "R", level: 85 },
-    { name: "SQL", level: 90 },
-    { name: "Machine Learning", level: 88 },
-    { name: "Deep Learning", level: 80 },
-    { name: "Data Visualization", level: 92 },
-    { name: "Big Data", level: 75 },
-    { name: "JavaScript/TypeScript", level: 85 },
-    { name: "React", level: 82 },
-    { name: "Next.js", level: 78 },
+    { name: "Linux/Bash", level: 95 },
+    { name: "Docker", level: 90 },
+    { name: "Kubernetes (K8s)", level: 80 },
+    { name: "OCI (Oracle Cloud)", level: 90 },
+    { name: "Terraform", level: 85 },
+    { name: "Ansible", level: 80 },
+    { name: "CI/CD (GitLab, Jenkins)", level: 88 },
+    { name: "Monitoramento (Prometheus)", level: 78 },
+    { name: "Redes (VPN, SSL, TCP/IP)", level: 85 },
+    { name: "Python (para automação)", level: 82 },
   ]
 
   const tools = [
-    "Pandas",
-    "NumPy",
-    "Scikit-learn",
-    "TensorFlow",
-    "PyTorch",
-    "Tableau",
-    "Power BI",
-    "Jupyter",
+    "Nginx",
+    "Apache",
+    "IIS",
+    "PostgreSQL",
     "Git",
+    "GitLab CI",
+    "Jenkins",
+    "Terraform",
+    "Ansible",
     "Docker",
-    "AWS",
-    "Azure",
-    "Spark",
-    "Hadoop",
-    "Airflow",
+    "Kubernetes",
+    "Prometheus",
+    "Grafana",
+    "Bash",
+    "Oracle Cloud (OCI)",
+    "VPN",
+    "SSL",
   ]
 
   const container = {
@@ -108,7 +110,7 @@ export default function Skills() {
                   <motion.div
                     key={index}
                     variants={item}
-                    className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-3 py-1 rounded-full text-sm"
+                    className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-3 py-1 rounded-full text-sm"
                     whileHover={{ scale: 1.05 }}
                     transition={{ type: "spring", stiffness: 400, damping: 10 }}
                   >

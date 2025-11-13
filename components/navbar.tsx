@@ -3,7 +3,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { Code, Database, FileText, Home, Menu, Moon, Sun, X } from "lucide-react"
+import { Code, Database, FileText, Home, Menu, Moon, Sun, X, Wrench, Cloud, GitBranch } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { useTheme } from "@/components/theme-provider"
 
@@ -16,8 +16,9 @@ export default function Navbar() {
   const navItems = [
     { name: "Início", href: "#home", icon: Home },
     { name: "Sobre", href: "#about", icon: FileText },
+    { name: "Habilidades", href: "#skills", icon: Wrench },
     { name: "Projetos", href: "#projects", icon: Database },
-    { name: "Experiência", href: "#experience", icon: Code },
+    { name: "Experiência", href: "#experience", icon: GitBranch },
     { name: "Contato", href: "#contact", icon: FileText },
   ]
 
@@ -31,12 +32,12 @@ export default function Navbar() {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6 py-1">
         <Link href="#home" className="flex items-center gap-2">
           <motion.div
-            className="h-8 w-8 rounded-full bg-gradient-to-br from-blue-600 to-blue-800"
+            className="h-8 w-8 rounded-full bg-gradient-to-br from-orange-600 to-orange-800"
             whileHover={{ rotate: 180 }}
             transition={{ duration: 0.5 }}
           />
           <span className="font-bold text-xl text-foreground transition-colors">
-            wrmartins<span className="text-blue-600 dark:text-blue-400">Portfolio</span>
+            wrmartins<span className="text-orange-600 dark:text-orange-400">Portfolio</span>
           </span>
         </Link>
 
@@ -46,7 +47,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400 flex items-center h-16"
+              className="text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-orange-600 dark:hover:text-orange-400 flex items-center h-16"
             >
               {item.name}
             </Link>
@@ -85,10 +86,10 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-blue-600 dark:hover:text-blue-400 leading-none"
+                className="flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-gray-100 transition-colors hover:text-orange-600 dark:hover:text-orange-400 leading-none"
                 onClick={toggleMenu}
               >
-                <item.icon className="h-5 w-5 text-blue-600" />
+                <item.icon className="h-5 w-5 text-orange-600" />
                 {item.name}
               </Link>
             ))}

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Award, BookOpen, BrainCircuit, Code, Database, LineChart } from "lucide-react"
+import { Cloud, Container, Terminal, GitBranch, ShieldCheck, Database } from "lucide-react"
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -28,7 +28,7 @@ export default function About() {
           >
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Sobre Mim</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-gray-900 dark:text-gray-100">
-              Cientista de dados apaixonado por transformar dados em soluções impactantes
+              Engenheiro DevOps apaixonado por automação e infraestrutura como código
             </p>
           </motion.div>
           <motion.div
@@ -39,43 +39,46 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <p className="mb-4">
-              Olá! Sou um cientista de dados e desenvolvedor de software. 
-              Com experiência de projetos em análise de dados, desenvolvimento de dashboards interativos e implementação de modelos de
-              machine learning, busco constantemente aplicar tecnologias inovadoras para resolver problemas complexos.
+              Olá! Sou um Engenheiro DevOps. 
+              Com experiência em administração de servidores, gerenciamento de nuvem (OCI) e automação de pipelines CI/CD,
+              busco constantemente aplicar tecnologias inovadoras para otimizar e escalar infraestruturas.
             </p>
             <p>
-              Minha jornada na ciência de dados começou na programação, evoluindo para
-              o desenvolvimento de soluções completas que combinam análise de dados, visualização e implementação de
-              algoritmos de IA. Estou sempre em busca de novos desafios e oportunidades para expandir meu conhecimento e
-              habilidades.
+              Minha jornada começou com suporte de infraestrutura, evoluindo para a administração de ambientes complexos 
+              em nuvem e a implementação de práticas DevOps para garantir estabilidade, segurança e eficiência.
             </p>
           </motion.div>
           <div className=" grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 ">
             {[
               {
+                icon: Cloud,
+                title: "Cloud & Infraestrutura",
+                description: "Administração de ambientes em nuvem (OCI, AWS) e gerenciamento de servidores (Linux, Windows).",
+              },
+              {
+                icon: Container,
+                title: "Containers & Orquestração",
+                description: "Implementação e gerenciamento de soluções com Docker e Kubernetes (OKE).",
+              },
+              {
+                icon: Terminal,
+                title: "Automação & IaC",
+                description: "Automação com scripts (Bash, Python) e Infraestrutura como Código (Terraform, Ansible).",
+              },
+              {
+                icon: GitBranch,
+                title: "CI/CD Pipelines",
+                description: "Criação e manutenção de pipelines de integração e entrega contínua (GitLab CI, Jenkins).",
+              },
+              {
+                icon: ShieldCheck,
+                title: "Monitoramento & Segurança",
+                description: "Ferramentas de monitoramento (Prometheus, Grafana) e práticas de segurança (SSL, VPNs).",
+              },
+              {
                 icon: Database,
-                title: "Análise de Dados",
-                description: "Transformação e análise de grandes volumes de dados para extrair insights valiosos.",
-              },
-              {
-                icon: LineChart,
-                title: "Dashboards",
-                description: "Criação de dashboards interativos e visualizações de dados impactantes.",
-              },
-              {
-                icon: BrainCircuit,
-                title: "Inteligência Artificial",
-                description: "Desenvolvimento e implementação de modelos de machine learning e deep learning.",
-              },
-              {
-                icon: Code,
-                title: "Desenvolvimento",
-                description: "Construção de aplicações web e soluções de software completas.",
-              },
-              {
-                icon: BookOpen,
-                title: "Pesquisa",
-                description: "Pesquisa contínua em novas tecnologias e metodologias de ciência de dados.",
+                title: "Banco de Dados",
+                description: "Administração, manutenção e resolução de problemas em bancos de dados PostgreSQL.",
               },
             ].map((item, index) => (
               <motion.div
@@ -89,8 +92,8 @@ export default function About() {
                 <Card>
                   <CardHeader className="pb-2">
                     <div className="flex items-center gap-2">
-                      <div className="rounded-full bg-blue-100 p-2 dark:bg-blue-900">
-                        <item.icon className="h-5 w-5 text-blue-600" />
+                      <div className="rounded-full bg-orange-100 p-2 dark:bg-orange-900">
+                        <item.icon className="h-5 w-5 text-orange-600" />
                       </div>
                       <CardTitle className="text-lg">{item.title}</CardTitle>
                     </div>

@@ -25,6 +25,11 @@ export default function Education() {
 
   const certifications = [
     {
+      name: "Oracle Cloud Infrastructure Foundations",
+      issuer: "Oracle",
+      date: "2024",
+    },
+    {
       name: "Métodos de Machine Learning Bioinspirados",
       issuer: "DIO",
       date: "2025",
@@ -62,7 +67,7 @@ export default function Education() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12">
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <GraduationCap className="h-6 w-6 text-blue-600" />
+              <GraduationCap className="h-6 w-6 text-orange-600" />
               <h3 className="text-2xl font-bold">Educação Formal</h3>
             </div>
 
@@ -79,7 +84,7 @@ export default function Education() {
                     <CardHeader>
                       <CardTitle>{edu.degree}</CardTitle>
                       <CardDescription className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                        <span className="font-medium text-blue-600">{edu.institution}</span>
+                        <span className="font-medium text-orange-600">{edu.institution}</span>
                         <span className="hidden sm:inline">•</span>
                         <span>{edu.period}</span>
                       </CardDescription>
@@ -95,7 +100,7 @@ export default function Education() {
 
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <Trophy className="h-6 w-6 text-blue-600" />
+              <Trophy className="h-6 w-6 text-orange-600" />
               <h3 className="text-2xl font-bold">Certificações</h3>
             </div>
 
@@ -111,14 +116,14 @@ export default function Education() {
                   <Card className="h-full">
                     <CardHeader className="pb-2">
                       <div className="flex items-center gap-2">
-                        <BookOpen className="h-4 w-4 text-blue-600" />
+                        <BookOpen className="h-4 w-4 text-orange-600" />
                         <CardTitle className="text-base">{cert.name}</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent>
                       <div className="flex justify-between items-center text-sm">
                         <span className="text-muted-foreground">{cert.issuer}</span>
-                        <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-2 py-0.5 rounded text-xs">
+                        <span className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-2 py-0.5 rounded text-xs">
                           {cert.date}
                         </span>
                       </div>

@@ -1,113 +1,112 @@
 "use client"
 import { motion } from "framer-motion"
-import { ArrowUpRight, BrainCircuit, Code, Database, ExternalLink, Github, LineChart } from "lucide-react"
+import { ArrowUpRight, BrainCircuit, Code, Database, ExternalLink, Github, LineChart, Container, Cloud, GitBranch, ShieldCheck } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export default function Projects() {
   const projects = {
-    dashboards: [
+    containers: [
       {
-        title: "Dashboard de Vendas",
-        description: "Dashboard interativo para análise de vendas com filtros dinâmicos e visualizações avançadas.",
+        title: "Cluster Kubernetes para Aplicação Web",
+        description: "Deploy de uma aplicação web escalável em um cluster OKE (Oracle Kubernetes Engine) com balanceamento de carga.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["Power BI", "DAX", "SQL"],
+        tags: ["Kubernetes", "OKE", "Docker", "Nginx"],
         link: "#",
         github: "#",
       },
       {
-        title: "Monitoramento de KPIs",
-        description: "Painel de controle para acompanhamento de indicadores de desempenho em tempo real.",
+        title: "Microserviços com Docker Compose",
+        description: "Orquestração de múltiplos serviços (API, Banco de Dados, Cache) utilizando Docker Compose para ambiente de desenvolvimento.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["Tableau", "Python", "API"],
+        tags: ["Docker", "Docker Compose", "Python"],
         link: "#",
         github: "#",
       },
       {
-        title: "Análise de Mercado",
-        description:
-          "Visualização de tendências de mercado e análise competitiva com dados atualizados automaticamente.",
+        title: "Registro de Imagens Privado",
+        description: "Configuração de um registry privado (ex: Harbor) para gerenciamento de imagens Docker de forma segura.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["Looker", "BigQuery", "GCP"],
-        link: "#",
-        github: "#",
-      },
-    ],
-    dataAnalysis: [
-      {
-        title: "Segmentação de Clientes",
-        description: "Análise de clustering para identificação de perfis de clientes e personalização de estratégias.",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["Python", "Scikit-learn", "Pandas"],
-        link: "#",
-        github: "#",
-      },
-      {
-        title: "Previsão de Demanda",
-        description: "Modelo de séries temporais para previsão de demanda de produtos com alta precisão.",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["R", "Prophet", "Tidyverse"],
-        link: "#",
-        github: "#",
-      },
-      {
-        title: "Análise de Sentimento",
-        description: "Processamento de linguagem natural para análise de sentimento em reviews de produtos.",
-        image: "/placeholder.svg?height=400&width=600",
-        tags: ["NLTK", "Transformers", "Python"],
+        tags: ["Docker", "Harbor", "Segurança"],
         link: "#",
         github: "#",
       },
     ],
-    software: [
+    cloud: [
       {
-        title: "Sistema de Recomendação",
-        description: "Aplicação web com sistema de recomendação baseado em comportamento do usuário.",
+        title: "Infraestrutura como Código (IaC)",
+        description: "Provisionamento de infraestrutura completa (VCN, Instâncias, Storage) na OCI usando Terraform.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["React", "Node.js", "MongoDB"],
+        tags: ["Terraform", "OCI", "IaC", "Automação"],
         link: "#",
         github: "#",
       },
       {
-        title: "API de Análise de Dados",
-        description: "API RESTful para processamento e análise de dados em tempo real.",
+        title: "Migração de Servidor On-Premise para Nuvem",
+        description: "Planejamento e execução da migração de um servidor de aplicação legado para uma instância VM na Oracle Cloud.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["FastAPI", "PostgreSQL", "Docker"],
+        tags: ["OCI", "Migração", "Linux", "Rsync"],
         link: "#",
         github: "#",
       },
       {
-        title: "Plataforma de Visualização",
-        description: "Plataforma web para criação e compartilhamento de visualizações de dados personalizadas.",
+        title: "Arquitetura Serverless (Functions)",
+        description: "Desenvolvimento de uma função serverless na OCI para processamento de arquivos em Object Storage.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["Next.js", "D3.js", "Supabase"],
+        tags: ["Serverless", "OCI Functions", "Python"],
         link: "#",
         github: "#",
       },
     ],
-    ai: [
+    cicd: [
       {
-        title: "Detecção de Fraudes",
-        description: "Sistema de machine learning para detecção de transações fraudulentas em tempo real.",
+        title: "Pipeline CI/CD para API Python",
+        description: "Criação de um pipeline no GitLab CI para buildar, testar e fazer deploy automático de uma API em um servidor.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["XGBoost", "Python", "Kafka"],
+        tags: ["GitLab CI", "CI/CD", "Docker", "SSH"],
         link: "#",
         github: "#",
       },
       {
-        title: "Chatbot Inteligente",
-        description: "Assistente virtual baseado em LLM para atendimento ao cliente com alta precisão.",
+        title: "Automação de Configuração com Ansible",
+        description: "Playbook Ansible para configurar e provisionar servidores web (Nginx, SSL) de forma idempotente.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["GPT", "LangChain", "React"],
+        tags: ["Ansible", "Nginx", "Automação", "IaC"],
         link: "#",
         github: "#",
       },
       {
-        title: "Visão Computacional",
-        description: "Sistema de reconhecimento de imagens para controle de qualidade em linha de produção.",
+        title: "Script de Backup de Banco de Dados",
+        description: "Script Bash para automação de backups diários de bancos de dados PostgreSQL e envio para Object Storage.",
         image: "/placeholder.svg?height=400&width=600",
-        tags: ["PyTorch", "OpenCV", "TensorRT"],
+        tags: ["Bash", "PostgreSQL", "Cron", "Cloud"],
+        link: "#",
+        github: "#",
+      },
+    ],
+    monitoring: [
+      {
+        title: "Monitoramento com Prometheus & Grafana",
+        description: "Implementação de stack de monitoramento para coletar métricas de servidores e containers.",
+        image: "/placeholder.svg?height=400&width=600",
+        tags: ["Prometheus", "Grafana", "Alertmanager"],
+        link: "#",
+        github: "#",
+      },
+      {
+        title: "Configuração de VPN Site-to-Site",
+        description: "Estabelecimento de um túnel VPN seguro entre a infraestrutura on-premise e a nuvem (OCI).",
+        image: "/placeholder.svg?height=400&width=600",
+        tags: ["VPN", "OpenSwan", "Redes", "OCI"],
+        link: "#",
+        github: "#",
+      },
+      {
+        title: "Análise de Logs com Stack ELK",
+        description: "Centralização e análise de logs de aplicações e servidores utilizando Elasticsearch, Logstash e Kibana.",
+        image: "/placeholder.svg?height=400&width=600",
+        tags: ["ELK", "Logs", "Observabilidade"],
         link: "#",
         github: "#",
       },
@@ -132,49 +131,99 @@ export default function Projects() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Projetos</h2>
             <p className="mx-auto max-w-[700px] text-muted-foreground md:text-xl text-gray-900 dark:text-gray-100">
-              Conheça alguns dos meus trabalhos em diferentes áreas
+              Conheça alguns dos meus projetos de automação e infraestrutura
             </p>
           </div>
         </motion.div>
 
-        <Tabs defaultValue="dashboards" className="mt-12">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 mb-8">
-            <TabsTrigger value="dashboards" className="flex items-center gap-2">
-              <LineChart className="h-4 w-4" />
-              <span className="hidden sm:inline">Dashboards</span>
+        <Tabs defaultValue="containers" className="mt-12">
+          {/* CORREÇÃO APLICADA AQUI: 
+            - `flex` e `overflow-x-auto` para mobile
+            - `md:grid`, `md:grid-cols-4` e `md:overflow-x-hidden` para desktop
+          */}
+          <TabsList className="flex w-full overflow-x-auto p-1 mb-8 md:grid md:w-full md:grid-cols-4 md:overflow-x-hidden">
+            <TabsTrigger value="containers" className="flex-shrink-0 whitespace-nowrap flex items-center gap-2">
+              <Container className="h-4 w-4" />
+              <span>Containers & K8s</span>
             </TabsTrigger>
-            <TabsTrigger value="dataAnalysis" className="flex items-center gap-2">
-              <Database className="h-4 w-4" />
-              <span className="hidden sm:inline">Análise de Dados</span>
+            <TabsTrigger value="cloud" className="flex-shrink-0 whitespace-nowrap flex items-center gap-2">
+              <Cloud className="h-4 w-4" />
+              <span>Cloud & IaC</span>
             </TabsTrigger>
-            <TabsTrigger value="software" className="flex items-center gap-2">
-              <Code className="h-4 w-4" />
-              <span className="hidden sm:inline">Software</span>
+            <TabsTrigger value="cicd" className="flex-shrink-0 whitespace-nowrap flex items-center gap-2">
+              <GitBranch className="h-4 w-4" />
+              <span>Automação & CI/CD</span>
             </TabsTrigger>
-            <TabsTrigger value="ai" className="flex items-center gap-2">
-              <BrainCircuit className="h-4 w-4" />
-              <span className="hidden sm:inline">IA</span>
+            <TabsTrigger value="monitoring" className="flex-shrink-0 whitespace-nowrap flex items-center gap-2">
+              <ShieldCheck className="h-4 w-4" />
+              <span>Redes & Monitoramento</span>
             </TabsTrigger>
           </TabsList>
 
-          {Object.entries(projects).map(([category, categoryProjects]) => (
-            <TabsContent key={category} value={category} className="mt-0">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {categoryProjects.map((project, index) => (
-                  <motion.div
-                    key={index}
-                    variants={fadeInUp}
-                    initial="initial"
-                    whileInView="animate"
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <ProjectCard project={project} />
-                  </motion.div>
-                ))}
-              </div>
-            </TabsContent>
-          ))}
+          <TabsContent value="containers" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.containers.map((project, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="cloud" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.cloud.map((project, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="cicd" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.cicd.map((project, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="monitoring" className="mt-0">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {projects.monitoring.map((project, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  initial="initial"
+                  whileInView="animate"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <ProjectCard project={project} />
+                </motion.div>
+              ))}
+            </div>
+          </TabsContent>
         </Tabs>
       </div>
     </section>
@@ -233,7 +282,7 @@ function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
           {project.title}
-          <ArrowUpRight className="h-4 w-4 text-blue-600 opacity-0 group-hover:opacity-100 transition-opacity" />
+          <ArrowUpRight className="h-4 w-4 text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity" />
         </CardTitle>
         <CardDescription className="line-clamp-2">{project.description}</CardDescription>
       </CardHeader>
@@ -242,7 +291,7 @@ function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-2 py-1 rounded-md text-xs"
+              className="bg-orange-100 dark:bg-orange-900/30 text-orange-800 dark:text-orange-300 px-2 py-1 rounded-md text-xs"
             >
               {tag}
             </span>
@@ -250,7 +299,7 @@ function ProjectCard({ project }: ProjectCardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button variant="ghost" className="w-full justify-between group-hover:text-blue-600" asChild>
+        <Button variant="ghost" className="w-full justify-between group-hover:text-orange-600" asChild>
           <a href={project.link} target="_blank" rel="noopener noreferrer">
             Ver projeto
             <ArrowUpRight className="h-4 w-4 ml-2" />
