@@ -1,0 +1,55 @@
+name: Deploy Portfólio na OCI
+
+# Dispara esta ação em todo push para a branch 'main'
+on:
+  push:
+    branches:
+      - main # Mude para 'master' se for o seu caso
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest # O GitHub vai usar um servidor Ubuntu para rodar isso
+
+    steps:
+      # 1. Baixa o seu código do GitHub para o servidor temporário
+      - name: Checkout Código
+        uses: actions/checkout@v3
+
+      # 2. Faz login no Docker Hub usando os Secrets
+      - name: Login no Docker Hub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # 3. Constrói a imagem Docker e envia para o Docker Hub
+      - name: Build e Push da Imagem Docker
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          push: true
+          # IMPORTANTE: Mude 'celta031' para o seu usuário do Docker Hub
+          tags: celta031/meu-portifolio:latest
+
+      # 4. Acessa a VPS via SSH e atualiza o container
+      - name: Deploy na VPS OCI
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          script: |
+            # Puxa a imagem nova que acabamos de enviar para o Docker Hub
+            docker pull celta031/meu-portifolio:latest
+            
+            # Para e remove o container 'website' antigo (se ele existir)
+            docker stop website || true
+            docker rm website || true
+            
+            # Inicia o novo container com a imagem atualizada
+            # (Exatamente como fizemos manualmente)
+            docker run -d \
+              -p 8080:80 \
+              --name website \
+              --restart always \
+              celta031/meu-portifolio:latest
